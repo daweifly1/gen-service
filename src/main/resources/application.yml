@@ -1,0 +1,24 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+server:
+  port: 7005
+spring:
+  redis:
+    host: 10.100.2.134
+    port: 6379
+    pool:
+      max-active: 8
+  cloud:
+    inetutils:
+      preferred-networks:
+        - 192.168
+  zipkin:
+    enabled: false
+    base-url: http://192.168.1.149:9002
+logging:
+  file: genlog
+  level:
+    root: info
+    ufast: info

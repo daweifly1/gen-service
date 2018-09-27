@@ -1,0 +1,21 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+    health-check-url-path: ${management.context-path}/health
+spring:
+  application:
+    name: fast-gen-service
+  cloud:
+    config:
+      enabled: false
+      discovery:
+        enabled: false
+        service-id: config-server
+      name: server-config
+      profile: test
+fast:
+  guid:
+    worker-id: 0
+    datacenter-id: 0
