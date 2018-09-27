@@ -21,7 +21,7 @@
 /.idea/
 /.idea/*.xml
 *.iml
-/register-center-web/target
+/gen-service/target
 
 /*/target
 
