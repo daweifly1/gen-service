@@ -1,12 +1,12 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka/
+      defaultZone: =http://eureka.jt.com:9000/eureka/
 server:
   port: 7005
 spring:
   redis:
-    host: 10.100.2.134
+    host: redis.jt.com
     port: 6379
     pool:
       max-active: 8

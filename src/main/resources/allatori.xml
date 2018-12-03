@@ -1,6 +1,6 @@
 <config>
     <input basedir="../../../target">
-        <jar in="gen-service-0.0.3-SNAPSHOT.jar" out="gen-service-0.0.3-SNAPSHOT.jar"/>
+        <jar in="gen-service-1.0.1-SNAPSHOT.jar" out="gen-service-allatori.jar"/>
     </input>
 
     <keep-names>
@@ -15,10 +15,10 @@
             <method access="protected+" parameters="keep"/>
         </class>
 
-        <class template="class * instanceof yb.ecp.fast.infra.infra.monitor.MemoryMonitor"/>
+        <class template="class * instanceof com.bkrwin.ufast.infra.infra.monitor.MemoryMonitor"/>
     </keep-names>
     <!-- <expiry date="2019/01/01" string="your application expired!"/> -->
 
     <property name="log-file" value="../../../target/renaming-log.xml"/>
-    <property name="string-encryption" value="disable" apply2class="class yb.ecp.fast.infra.*"/>
+    <property name="string-encryption" value="disable" apply2class="class com.bkrwin.ufast.infra.*"/>
 </config>

@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>yb.ecp.fast.infra</groupId>
+    <groupId>com.bkrwin.ufast.infra</groupId>
     <artifactId>gen-service</artifactId>
     <packaging>jar</packaging>
 
@@ -11,16 +11,17 @@
     <description>original service for creation gen-service-archetype based on spring cloud</description>
 
     <parent>
-        <groupId>yb.ecp.fast</groupId>
+        <groupId>com.bkrwin.ufast</groupId>
         <artifactId>ufast-starter-parent</artifactId>
-        <version>0.0.3-SNAPSHOT</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <dependencies>
 
         <dependency>
-            <groupId>yb.ecp.fast.infra</groupId>
+            <groupId>com.bkrwin.ufast.infra</groupId>
             <artifactId>misc</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,19 +48,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <executions>
@@ -69,6 +57,30 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <!--<id>run-allatori</id>-->
+                        <phase>package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <!--<configuration>-->
+                    <!--<executable>java</executable>-->
+                    <!--<arguments>-->
+                        <!--<argument>-Xms128m</argument>-->
+                        <!--<argument>-Xmx512m</argument>-->
+                        <!--<argument>-jar</argument>-->
+                        <!--<argument>${basedir}/../allatori-confusion/allatori.jar</argument>-->
+                        <!--<argument>${basedir}/src/main/resources/allatori.xml</argument>-->
+                    <!--</arguments>-->
+                <!--</configuration>-->
             </plugin>
         </plugins>
     </build>

@@ -7,10 +7,10 @@
                     defaultValue="spring-app"/>
     <springProperty scope="context" name="PORT" source="server.port"
                     defaultValue="port"/>
-    <conversionRule conversionWord="IP" converterClass="yb.ecp.fast.infra.infra.log.IPLogConfig"/>
-    <conversionRule conversionWord="FAST_LEVEL" converterClass="yb.ecp.fast.infra.infra.log.FastLevelConverter"/>
+    <conversionRule conversionWord="IP" converterClass="com.bkrwin.ufast.infra.infra.log.IPLogConfig"/>
+    <conversionRule conversionWord="FAST_LEVEL" converterClass="com.bkrwin.ufast.infra.infra.log.FastLevelConverter"/>
     <conversionRule conversionWord="fastCaller"
-                    converterClass="yb.ecp.fast.infra.infra.log.FastCallerDataConverter"/>
+                    converterClass="com.bkrwin.ufast.infra.infra.log.FastCallerDataConverter"/>
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
     <conversionRule conversionWord="wex"
                     converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
