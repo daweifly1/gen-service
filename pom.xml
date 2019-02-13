@@ -6,6 +6,7 @@
     <groupId>com.bkrwin.ufast.infra</groupId>
     <artifactId>gen-service</artifactId>
     <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
 
     <name>gen-service</name>
     <description>original service for creation gen-service-archetype based on spring cloud</description>
